@@ -434,5 +434,12 @@ footer {
     }
     .nav-open-left-primary-menu-links-wrapper{
         left: 48px;
+        top: 45%;
+    }
+    .nav-open-left-primary-menu-link{
+        font-size: 24px;
+    }
+    .nav-open-left-secondary-menu-link{
+        font-size: 16px;
     }
 }
