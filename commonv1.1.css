@@ -2,10 +2,12 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    font-family: elza, sans-serif;
 }
 
 body{
     background-color: #0A0A0A;
+    overflow-x: hidden;
 }
 
 main{
@@ -22,26 +24,32 @@ ul{
 
 /* Navbar */
 .nav-closed{
-    height: 84px;
+    height: 144px;
     width: 100vw;
     /* border: 1px solid white; */
-    padding: 0px 24px;
+    padding: 24px 24px;
+    position: fixed;
     top: 0%;
     left: 0%;
-    background-color: #0a0a0ac6;
+    z-index: 1;
+    /* background-color: #0a0a0ac6; */
 }
 
 .nav-closed-logo-wrapper{
+    display: block;
     position: absolute;
     left: 48px;
     top: 48px;
+}
+
+.nav-closed-logo-wrapper-open{
+    display: none;
 }
 
 /* Burger Menu */
 
 .burger-menu-wrapper{
     position: absolute;
-    z-index: 1;
     top: 48px;
     right: 48px;
     height: 48px;
@@ -118,7 +126,8 @@ ul{
     height: 100vh;
     width: 45vw;
     position: fixed;
-    left: -100%;
+    z-index: 1;
+    left: -120%;
 }
 
 .nav-open-logo-wrapper{
@@ -151,7 +160,6 @@ ul{
 }
 
 .nav-open-left-primary-menu-link{
-    font-family: elza, sans-serif;
     font-weight: 300;
     font-size: 36px;
     color: #0A0A0A;
@@ -170,10 +178,12 @@ ul{
 
 .nav-open-left-secondary-menu-links-wrapper-ul{
     display: flex;
+    flex-wrap: nowrap;
+    width: 460px;
+    /* border: 1px solid red; */
 }
 
 .nav-open-left-secondary-menu-link{
-    font-family: elza, sans-serif;
     font-weight: 200;
     font-size: 24px;
     color: #0A0A0A;
@@ -194,8 +204,9 @@ ul{
 
 .nav-open-right-socials-wrapper{
     position: fixed;
-    right: -100%;
-    bottom: 48px;
+    right: 48px;
+    bottom: -48px;
+    z-index: 1;
 }
 
 .nav-open-right-socials-ul{
@@ -351,13 +362,29 @@ footer {
     border-bottom: 2px solid #0a0a0a59;
 } */
 .footer-right-nav-links-secondary-a , .footer-right-nav-links-primary-a{
-    font-family: elza, sans-serif;
     font-weight: 200;
     font-size: 24px;
     color: #0A0A0A;
     text-decoration: none;
     border-bottom: 2px solid #0a0a0a59;
     transition: 100ms ease-in-out;
+}
+
+.dark-overlay{
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+}
+
+.transition-overlay{
+    position: fixed;
+    left: 100vw;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
 }
 
 @media only screen and (min-width:1280px) {
@@ -426,7 +453,7 @@ footer {
         margin-right: 0px;
     }
     .nav-open-right-socials-wrapper{
-        right: 48px;
+        right: -100%;
         /* left: 48px; */
         bottom: 48px;
     }
