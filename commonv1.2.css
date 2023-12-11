@@ -205,7 +205,7 @@ ul{
 .nav-open-right-socials-wrapper{
     position: fixed;
     right: 48px;
-    bottom: -48px;
+    bottom: -100%;
     z-index: 1;
 }
 
@@ -453,9 +453,8 @@ footer {
         margin-right: 0px;
     }
     .nav-open-right-socials-wrapper{
-        right: -100%;
-        /* left: 48px; */
-        bottom: 48px;
+        right: 48px;
+        bottom: -100%;
     }
     .nav-open-left-secondary-menu-links-wrapper{
         bottom: 48px;

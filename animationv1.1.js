@@ -1,21 +1,5 @@
 // Page Transition
 
-// barba.init({
-//     transitions: [{
-//       name: 'opacity-transition',
-//       leave(data) {
-//         return gsap.to(data.current.container, {
-//           opacity: 0
-//         });
-//       },
-//       enter(data) {
-//         return gsap.from(data.next.container, {
-//           opacity: 0
-//         });
-//       }
-//     }]
-//   });
-
 barba.init({
     transition: [{
         leave(date){
@@ -32,23 +16,6 @@ barba.init({
         }
     }]
 })
-
-// barba.init({
-
-//     sync: true,
-
-//     transition: [{
-//         async leave(data) {
-//             const done = this.async()
-//             leaveTransition()
-//             await delay(1500)
-//             done()
-//         },
-//         async enter(data) {
-//             enterTransition()
-//         }
-//     }]
-// })
 
 //   GSAP Page Transition
 
@@ -143,7 +110,7 @@ const navControl = () => {
             ease: "power1.out"
         })
         gsap.to('.nav-open-right-socials-wrapper',{
-            bottom: '-48px',
+            bottom: '-100%',
             duration: 2,
             opacity: 0,
             ease: "power1.out"
